@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="pl">
   <head>
@@ -63,9 +61,18 @@
           </p>
 
           <div class="contact-page__details" aria-label="Dane kontaktowe">
-            <a href="tel:+48509850497">+48 509 850 497</a>
-            <a href="mailto:pracownia.miszczyszyn@gmail.com">pracownia.miszczyszyn@gmail.com</a>
-            <span>Szczecin i projekty online</span>
+            <a class="contact-page__detail" href="tel:+48509850497" aria-label="Zadzwoń do Pracowni Pięknej Przestrzeni">
+              <span class="contact-page__detail-icon">☎</span>
+              <span>+48 509 850 497</span>
+            </a>
+            <a class="contact-page__detail" href="mailto:pracownia.miszczyszyn@gmail.com" aria-label="Napisz e-mail do Pracowni Pięknej Przestrzeni">
+              <span class="contact-page__detail-icon">✉</span>
+              <span>pracownia.miszczyszyn@gmail.com</span>
+            </a>
+            <span class="contact-page__detail contact-page__detail--static">
+              <span class="contact-page__detail-icon">⌂</span>
+              <span>Szczecin i projekty online</span>
+            </span>
           </div>
         </div>
 
@@ -107,20 +114,30 @@
     </main>
 
     <footer class="site-footer">
-      <a class="brand brand--footer" href="index.html" aria-label="Pracownia Pięknej Przestrzeni">
-        <span class="brand__mark">PPP</span>
-        <span class="brand__divider"></span>
-        <span class="brand__text">Pracownia<br />Pięknej Przestrzeni</span>
-      </a>
-      <div class="footer-contact">
-        <span>+48 509 850 497</span>
-        <span>pracownia.miszczyszyn@gmail.com</span>
-      </div>
-      <div class="footer-social" aria-label="Social media">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="Pinterest">PI</a>
-      </div>
-    </footer>
+        <a class="brand brand--footer" href="index.html" aria-label="Pracownia Pięknej Przestrzeni">
+          <span class="brand__mark">PPP</span>
+          <span class="brand__divider"></span>
+          <span class="brand__text">Pracownia<br />Pięknej Przestrzeni</span>
+        </a>
+        <div class="footer-contact">
+          <a class="footer-contact__item" href="tel:+48509850497" aria-label="Zadzwoń do Pracowni Pięknej Przestrzeni">
+            <span class="footer-contact__icon">☎</span>
+            <span>+48 509 850 497</span>
+          </a>
+        
+          <a class="footer-contact__item" href="mailto:pracownia.miszczyszyn@gmail.com" aria-label="Napisz e-mail do Pracowni Pięknej Przestrzeni">
+            <span class="footer-contact__icon">✉</span>
+            <span>pracownia.miszczyszyn@gmail.com</span>
+          </a>
+        </div>
+        <div class="footer-social" aria-label="Social media">
+          <a href="https://www.instagram.com/ppp.magda.miszczyszyn" target="_blank" rel="noopener noreferrer" aria-label="Instagram Pracowni Pięknej Przestrzeni">
+            <svg class="footer-social__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5Zm4.25 3.25A4.75 4.75 0 1 1 7.25 12 4.75 4.75 0 0 1 12 7.25Zm0 2A2.75 2.75 0 1 0 14.75 12 2.75 2.75 0 0 0 12 9.25Zm5-2.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z" />
+            </svg>
+          </a>
+        </div>
+      </footer>
 
     <script src="script.js"></script>
   </body>
