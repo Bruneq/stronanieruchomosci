@@ -9,9 +9,29 @@
     />
     <title>Realizacje | Pracownia Pięknej Przestrzeni</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="./assets/favicon-v4.png" />
-    <link rel="shortcut icon" href="./assets/favicon-v4.png" />
-    <link rel="apple-touch-icon" href="./assets/favicon-v4.png" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <style>
+      @media (min-width: 1181px) {
+        .portfolio-index__grid--five {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+
+        .portfolio-index__grid--five .portfolio-index-card:nth-child(-n + 3) {
+          grid-column: span 2;
+        }
+
+        .portfolio-index__grid--five .portfolio-index-card:nth-child(n + 4) {
+          grid-column: span 3;
+        }
+      }
+
+      @media (min-width: 781px) and (max-width: 1180px) {
+        .portfolio-index__grid--five .portfolio-index-card:last-child {
+          grid-column: 1 / -1;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header" id="top">
@@ -69,8 +89,8 @@
           </figure>
           <figure class="portfolio-hero__image">
             <img
-              src="assets/realizacje/MiniKawalerka/wizualizacja2.png"
-              alt="Jasna mini kawalerka z geometryczną tapetą"
+              src="assets/realizacje/SypialniaW3Odslonach/wizualizacja4.png"
+              alt="Jasna sypialnia z tapetą botaniczną i dekoracyjnymi lustrami"
             />
           </figure>
         </div>
@@ -79,14 +99,14 @@
       <section class="portfolio-index" id="projekty" aria-labelledby="portfolio-index-title">
         <div class="portfolio-index__heading reveal">
           <p class="eyebrow">Portfolio</p>
-          <h2 id="portfolio-index-title">Cztery różne historie przestrzeni</h2>
+          <h2 id="portfolio-index-title">Pięć różnych historii przestrzeni</h2>
           <p>
-            Od niewielkiej kawalerki po mieszkanie przygotowane dla pracy zdalnej — każda realizacja
-            pokazuje inne potrzeby, metraż i charakter wnętrza.
+            Od sypialni o powierzchni 8,5 m² po mieszkanie przygotowane do pracy zdalnej — każda
+            realizacja odpowiada na inny metraż, budżet i sposób codziennego użytkowania.
           </p>
         </div>
 
-        <nav class="portfolio-index__grid" aria-label="Lista realizacji">
+        <nav class="portfolio-index__grid portfolio-index__grid--five" aria-label="Lista realizacji">
           <a class="portfolio-index-card reveal" href="#dla-niego">
             <img src="assets/realizacje/DlaNiego/wizualizacja1.png" alt="" />
             <span class="portfolio-index-card__overlay"></span>
@@ -124,6 +144,21 @@
             <span class="portfolio-index-card__content">
               <strong>Mini kawalerka</strong>
               <small>24 m² w butikowym stylu</small>
+            </span>
+          </a>
+
+          <a class="portfolio-index-card reveal" href="#sypialnia-w-trzech-odslonach">
+            <img
+              src="assets/realizacje/SypialniaW3Odslonach/wizualizacja4.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="portfolio-index-card__overlay"></span>
+            <span class="portfolio-index-card__number">05</span>
+            <span class="portfolio-index-card__content">
+              <strong>Sypialnia w trzech odsłonach</strong>
+              <small>8,5 m² w trzech wariantach kolorystycznych</small>
             </span>
           </a>
         </nav>
@@ -381,6 +416,153 @@
           </button>
           <button class="portfolio-image portfolio-image--plan" type="button" data-lightbox data-caption="Rzut funkcjonalny mini kawalerki">
             <img src="assets/realizacje/MiniKawalerka/rzut.png" alt="Rzut funkcjonalny mini kawalerki" loading="lazy" />
+          </button>
+        </div>
+      </article>
+
+
+      <article
+        class="portfolio-project portfolio-project--dark"
+        id="sypialnia-w-trzech-odslonach"
+        aria-labelledby="sypialnia-w-trzech-odslonach-title"
+      >
+        <header class="portfolio-project__header reveal">
+          <span class="portfolio-project__number">05</span>
+          <div>
+            <p class="eyebrow">Sypialnia 8,5 m²</p>
+            <h2 id="sypialnia-w-trzech-odslonach-title">
+              Sypialnia w trzech odsłonach
+            </h2>
+            <p class="portfolio-project__lead">
+              Niewielkie wnętrze opracowane w trzech wariantach kolorystycznych,
+              z naciskiem na komfort, przechowywanie i rozsądny budżet.
+            </p>
+          </div>
+
+          <ul
+            class="portfolio-project__facts"
+            aria-label="Najważniejsze cechy projektu"
+          >
+            <li>8,5 m²</li>
+            <li>3 warianty</li>
+            <li>dużo przechowywania</li>
+            <li>mieszkanie na wynajem</li>
+          </ul>
+        </header>
+
+        <div class="portfolio-project__intro reveal">
+          <div class="portfolio-project__statement">
+            <p>
+              Projekt udowadnia, że nawet bardzo mały pokój może stać się
+              wygodną, uporządkowaną i estetyczną sypialnią — bez przekraczania
+              ograniczonego budżetu.
+            </p>
+          </div>
+
+          <div class="project-detail-grid project-detail-grid--three">
+            <section class="project-detail-card">
+              <span>01</span>
+              <h3>Komfort na małym metrażu</h3>
+              <p>
+                Priorytetem było wygodne łóżko oraz zachowanie swobodnego
+                przejścia w pokoju o powierzchni zaledwie 8,5 m².
+              </p>
+            </section>
+
+            <section class="project-detail-card">
+              <span>02</span>
+              <h3>Przechowywanie</h3>
+              <p>
+                Pojemna zabudowa i wykorzystanie dostępnej wysokości pomagają
+                utrzymać porządek, co ma szczególne znaczenie w mieszkaniu
+                przeznaczonym na wynajem.
+              </p>
+            </section>
+
+            <section class="project-detail-card">
+              <span>03</span>
+              <h3>Trzy odsłony</h3>
+              <p>
+                Warianty kolorystyczne pokazują, jak za pomocą tapety, drewna,
+                luster i dodatków można nadać temu samemu układowi zupełnie
+                inny charakter.
+              </p>
+            </section>
+          </div>
+        </div>
+
+        <div
+          class="project-gallery project-gallery--five reveal"
+          aria-label="Galeria projektu Sypialnia w trzech odsłonach"
+        >
+          <button
+            class="portfolio-image portfolio-image--tall"
+            type="button"
+            data-lightbox
+            data-caption="Naturalna odsłona sypialni z tapetą botaniczną i lustrzaną zabudową"
+          >
+            <img
+              src="assets/realizacje/SypialniaW3Odslonach/wizualizacja1.png"
+              alt="Naturalna odsłona sypialni z tapetą botaniczną i lustrzaną zabudową"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
+
+          <button
+            class="portfolio-image"
+            type="button"
+            data-lightbox
+            data-caption="Wariant sypialni z ciepłą drewnianą podłogą i dekoracyjnymi grafikami"
+          >
+            <img
+              src="assets/realizacje/SypialniaW3Odslonach/wizualizacja2.png"
+              alt="Wariant sypialni z ciepłą drewnianą podłogą i dekoracyjnymi grafikami"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
+
+          <button
+            class="portfolio-image"
+            type="button"
+            data-lightbox
+            data-caption="Sypialnia z geometryczną tapetą i zestawem dekoracyjnych luster"
+          >
+            <img
+              src="assets/realizacje/SypialniaW3Odslonach/wizualizacja3.png"
+              alt="Sypialnia z geometryczną tapetą i zestawem dekoracyjnych luster"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
+
+          <button
+            class="portfolio-image"
+            type="button"
+            data-lightbox
+            data-caption="Jasna odsłona sypialni z roślinami i miękkimi tkaninami"
+          >
+            <img
+              src="assets/realizacje/SypialniaW3Odslonach/wizualizacja4.png"
+              alt="Jasna odsłona sypialni z roślinami i miękkimi tkaninami"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
+
+          <button
+            class="portfolio-image portfolio-image--plan"
+            type="button"
+            data-lightbox
+            data-caption="Rzut funkcjonalny sypialni o powierzchni 8,5 m²"
+          >
+            <img
+              src="assets/realizacje/SypialniaW3Odslonach/rzut.png"
+              alt="Rzut funkcjonalny sypialni o powierzchni 8,5 m²"
+              loading="lazy"
+              decoding="async"
+            />
           </button>
         </div>
       </article>
