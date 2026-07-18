@@ -96,7 +96,7 @@ const updatePortfolioLightbox = (index) => {
 
   if (!sourceImage) return;
 
-  portfolioLightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+  portfolioLightboxImage.src = item.dataset.full || sourceImage.currentSrc || sourceImage.src;
   portfolioLightboxImage.alt = sourceImage.alt;
   portfolioLightboxCaption.textContent = item.dataset.caption || sourceImage.alt;
 };

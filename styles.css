@@ -838,7 +838,7 @@ h3 {
   padding-bottom: clamp(70px, 8vw, 120px);
   background:
     linear-gradient(90deg, rgba(91, 64, 43, 0.72), rgba(188, 162, 132, 0.44)),
-    url("assets/naturalne-cieplo.jpg") center/cover;
+    url("assets/naturalne-cieplo.webp") center/cover;
   color: #fff;
 }
 
@@ -1461,7 +1461,7 @@ h3 {
   padding: clamp(70px, 8vw, 124px) clamp(22px, 8vw, 112px);
   background:
     linear-gradient(90deg, rgba(91, 64, 43, 0.82), rgba(188, 162, 132, 0.54)),
-    url("assets/naturalne-cieplo.jpg") center/cover;
+    url("assets/naturalne-cieplo.webp") center/cover;
   text-align: center;
   color: #fff;
 }
@@ -1831,7 +1831,7 @@ h3 {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(39, 31, 25, 0.84), rgba(118, 83, 58, 0.58)),
-    url("assets/nowoczesna-elegancja.jpg") center/cover;
+    url("assets/nowoczesna-elegancja.webp") center/cover;
 }
 
 .process-cta .eyebrow,
@@ -2430,7 +2430,7 @@ h3 {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(37, 29, 24, 0.88), rgba(98, 67, 47, 0.58)),
-    url("assets/realizacje/DlaNiego/wizualizacja2.png") center 56% / cover;
+    url("assets/realizacje/DlaNiego/wizualizacja2.webp") center 56% / cover;
 }
 
 .portfolio-cta__content {
