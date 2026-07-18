@@ -3,22 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pracownia Pięknej Przestrzeni — projektowanie i stylizacja wnętrz, wizualizacje 3D oraz aranżacje dopasowane do stylu życia klienta." />
+    <meta
+      name="description"
+      content="Pracownia Pięknej Przestrzeni — projektowanie i stylizacja wnętrz, wizualizacje 3D oraz aranżacje dopasowane do stylu życia klienta."
+    />
     <title>Pracownia Pięknej Przestrzeni</title>
+
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="./assets/favicon-v4.png" />
-    <link rel="shortcut icon" href="./assets/favicon-v4.png" />
-    <link rel="apple-touch-icon" href="./assets/favicon-v4.png" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <style>
+      /* Karta kontaktowa na stronie głównej */
+      .contact-guide {
+        padding: clamp(28px, 4vw, 46px);
+        background: rgba(255, 253, 249, 0.94);
+        color: var(--ink);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+      .contact-guide__eyebrow {
+        margin: 0 0 18px;
+        color: var(--accent) !important;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .contact-guide h3 {
+        margin: 0;
+        max-width: 460px;
+        font-family: var(--serif);
+        font-size: clamp(2rem, 3vw, 3.2rem);
+        font-weight: 400;
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+      }
+
+      .contact-cta .contact-guide__intro {
+        max-width: 520px;
+        margin: 22px 0 30px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .contact-guide__items {
+        margin-bottom: 32px;
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-guide__item {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
+        align-items: center;
+        padding: 17px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-guide__item span {
+        color: var(--accent);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .contact-cta .contact-guide__item p {
+        margin: 0;
+        color: var(--ink);
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 680px) {
+        .contact-guide {
+          padding: 28px 22px;
+        }
+
+        .contact-guide .button {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
+
   <body>
     <header class="site-header" id="top">
-      <a class="brand" href="index.html" aria-label="Pracownia Pięknej Przestrzeni">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Pracownia Pięknej Przestrzeni"
+      >
         <span class="brand__mark">PPP</span>
         <span class="brand__divider"></span>
         <span class="brand__text">Pracownia<br />Pięknej Przestrzeni</span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-label="Otwórz menu"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -33,22 +121,41 @@
         <a href="kontakt.html">Kontakt</a>
       </nav>
 
-      <a class="button button--dark header-cta" href="kontakt.html">Umów konsultację</a>
+      <a class="button button--dark header-cta" href="kontakt.html">
+        Umów konsultację
+      </a>
     </header>
 
     <main>
       <section class="hero section-pad" aria-labelledby="hero-title">
         <div class="hero__content reveal">
           <p class="eyebrow">Projektowanie i stylizacja wnętrz</p>
-          <h1 id="hero-title">Tworzę wnętrza, które opowiadają Twoją historię.</h1>
-          <p class="hero__lead">Funkcjonalne, harmonijne i ponadczasowe przestrzenie dopasowane do Ciebie — od koncepcji po realistyczne wizualizacje 3D.</p>
+
+          <h1 id="hero-title">
+            Tworzę wnętrza, które opowiadają Twoją historię.
+          </h1>
+
+          <p class="hero__lead">
+            Funkcjonalne, harmonijne i ponadczasowe przestrzenie dopasowane
+            do Ciebie — od koncepcji po realistyczne wizualizacje 3D.
+          </p>
+
           <div class="hero__actions">
-            <a class="button button--dark" href="realizacje.html">Zobacz realizacje</a>
-            <a class="button button--light" href="kontakt.html">Skontaktuj się</a>
+            <a class="button button--dark" href="realizacje.html">
+              Zobacz realizacje
+            </a>
+
+            <a class="button button--light" href="kontakt.html">
+              Skontaktuj się
+            </a>
           </div>
         </div>
+
         <div class="hero__image reveal reveal--delay">
-          <img src="assets/jasna-harmonia.jpg" alt="Elegancki salon w ciepłych neutralnych kolorach" />
+          <img
+            src="assets/jasna-harmonia.jpg"
+            alt="Elegancki salon w ciepłych neutralnych kolorach"
+          />
         </div>
       </section>
 
@@ -57,10 +164,12 @@
           <strong>Estetyka</strong>
           <span>Ponadczasowe piękno i spójna kolorystyka.</span>
         </div>
+
         <div>
           <strong>Funkcjonalność</strong>
           <span>Wygodne układy dopasowane do codzienności.</span>
         </div>
+
         <div>
           <strong>Wizualizacje 3D</strong>
           <span>Zobacz efekt przed rozpoczęciem realizacji.</span>
@@ -70,9 +179,20 @@
       <section class="section section--offer" aria-labelledby="offer-title">
         <div class="section__heading reveal">
           <p class="eyebrow">Oferta</p>
-          <h2 id="offer-title">Kompleksowe podejście do Twojej przestrzeni</h2>
-          <p>Łączę estetykę z funkcjonalnością, aby tworzyć wnętrza piękne, wygodne i dopasowane do Twojego stylu życia. Od koncepcji po finalny efekt — jestem z Tobą na każdym etapie projektu.</p>
-          <a class="button button--outline" href="oferta.html">Zobacz pełną ofertę</a>
+
+          <h2 id="offer-title">
+            Kompleksowe podejście do Twojej przestrzeni
+          </h2>
+
+          <p>
+            Łączę estetykę z funkcjonalnością, aby tworzyć wnętrza piękne,
+            wygodne i dopasowane do Twojego stylu życia. Od koncepcji po
+            finalny efekt — jestem z Tobą na każdym etapie projektu.
+          </p>
+
+          <a class="button button--outline" href="oferta.html">
+            Zobacz pełną ofertę
+          </a>
         </div>
 
         <div class="services-grid">
@@ -82,30 +202,35 @@
             <h3>Projektowanie wnętrz</h3>
             <p>Mieszkań, domów i lokali użytkowych.</p>
           </article>
+
           <article class="service-card reveal">
             <span class="service-card__number">02</span>
             <span class="service-card__icon" aria-hidden="true">◑</span>
             <h3>Aranżacja i stylizacja</h3>
             <p>Przemyślane wnętrza z charakterem.</p>
           </article>
+
           <article class="service-card reveal">
             <span class="service-card__number">03</span>
             <span class="service-card__icon" aria-hidden="true">◇</span>
             <h3>Wizualizacje 3D</h3>
             <p>Realistyczny podgląd efektu przed realizacją.</p>
           </article>
+
           <article class="service-card reveal">
             <span class="service-card__number">04</span>
             <span class="service-card__icon" aria-hidden="true">◌</span>
             <h3>Dobór materiałów</h3>
             <p>Kolorystyka, materiały, meble i dodatki.</p>
           </article>
+
           <article class="service-card reveal">
             <span class="service-card__number">05</span>
             <span class="service-card__icon" aria-hidden="true">▣</span>
             <h3>Optymalne wykorzystanie</h3>
             <p>Funkcjonalne rozwiązania dopasowane do Ciebie.</p>
           </article>
+
           <article class="service-card reveal">
             <span class="service-card__number">06</span>
             <span class="service-card__icon" aria-hidden="true">▤</span>
@@ -121,24 +246,38 @@
             <p class="eyebrow">Realizacje</p>
             <h2 id="projects-title">Wybrane projekty</h2>
           </div>
-          <a class="text-link" href="realizacje.html">Zobacz wszystkie realizacje <span>→</span></a>
+
+          <a class="text-link" href="realizacje.html">
+            Zobacz wszystkie realizacje <span>→</span>
+          </a>
         </div>
 
         <div class="project-grid">
           <article class="project-card reveal">
-            <img src="assets/nowoczesna-elegancja.jpg" alt="Nowoczesny salon z neutralną sofą i obrazem" />
+            <img
+              src="assets/nowoczesna-elegancja.jpg"
+              alt="Nowoczesny salon z neutralną sofą i obrazem"
+            />
             <div class="project-card__body">
               <h3>Nowoczesna elegancja</h3>
             </div>
           </article>
+
           <article class="project-card reveal">
-            <img src="assets/naturalne-cieplo.jpg" alt="Salon w naturalnych kolorach z rdzawymi dodatkami" />
+            <img
+              src="assets/naturalne-cieplo.jpg"
+              alt="Salon w naturalnych kolorach z rdzawymi dodatkami"
+            />
             <div class="project-card__body">
               <h3>Naturalne ciepło</h3>
             </div>
           </article>
+
           <article class="project-card reveal">
-            <img src="assets/jasna-harmonia.jpg" alt="Jasny salon z beżową sofą i drewnianą zabudową" />
+            <img
+              src="assets/jasna-harmonia.jpg"
+              alt="Jasny salon z beżową sofą i drewnianą zabudową"
+            />
             <div class="project-card__body">
               <h3>Jasna harmonia</h3>
             </div>
@@ -148,15 +287,34 @@
 
       <section class="about" aria-labelledby="about-title">
         <div class="about__image reveal">
-          <img src="assets/magdalena-miszczyszyn.jpg" alt="Magdalena Miszczyszyn" />
+          <img
+            src="assets/magdalena-miszczyszyn.jpg"
+            alt="Magdalena Miszczyszyn"
+          />
         </div>
+
         <div class="about__content reveal reveal--delay">
           <p class="eyebrow">O mnie</p>
           <h2 id="about-title">Magdalena Miszczyszyn</h2>
-          <p>Projektowanie wnętrz to dla mnie nie tylko praca, ale przede wszystkim pasja. Wierzę, że dobrze zaprojektowana przestrzeń ma realny wpływ na jakość życia — powinna być piękna, funkcjonalna i w pełni dopasowana do potrzeb mieszkańców.</p>
-          <p>Każdy projekt traktuję indywidualnie, z pełnym zaangażowaniem i dbałością o detale. Uwielbiam łączyć estetykę z praktycznymi rozwiązaniami, tworząc wnętrza ponadczasowe i autentyczne.</p>
-          <a class="button button--outline" href="o-mnie.html">Poznaj mnie lepiej</a>
+
+          <p>
+            Projektowanie wnętrz to dla mnie nie tylko praca, ale przede
+            wszystkim pasja. Wierzę, że dobrze zaprojektowana przestrzeń ma
+            realny wpływ na jakość życia — powinna być piękna, funkcjonalna
+            i w pełni dopasowana do potrzeb mieszkańców.
+          </p>
+
+          <p>
+            Każdy projekt traktuję indywidualnie, z pełnym zaangażowaniem
+            i dbałością o detale. Uwielbiam łączyć estetykę z praktycznymi
+            rozwiązaniami, tworząc wnętrza ponadczasowe i autentyczne.
+          </p>
+
+          <a class="button button--outline" href="o-mnie.html">
+            Poznaj mnie lepiej
+          </a>
         </div>
+
         <span class="about__watermark" aria-hidden="true">PPP</span>
       </section>
 
@@ -165,86 +323,150 @@
           <p class="eyebrow">Proces</p>
           <h2 id="values-title">Dlaczego warto ze mną współpracować?</h2>
         </div>
+
         <div class="values-grid">
           <article class="value-card reveal">
             <span aria-hidden="true">♡</span>
             <h3>Indywidualne podejście</h3>
             <p>Słucham i projektuję wnętrza dopasowane do Ciebie.</p>
           </article>
+
           <article class="value-card reveal">
             <span aria-hidden="true">◔</span>
             <h3>Funkcjonalność</h3>
             <p>Tworzę wygodne i praktyczne przestrzenie na co dzień.</p>
           </article>
+
           <article class="value-card reveal">
             <span aria-hidden="true">◉</span>
             <h3>Estetyka</h3>
             <p>Ponadczasowe piękno, które cieszy przez lata.</p>
           </article>
+
           <article class="value-card reveal">
             <span aria-hidden="true">♧</span>
             <h3>Komfort współpracy</h3>
             <p>Jestem z Tobą na każdym etapie projektu.</p>
           </article>
+
           <article class="value-card reveal">
             <span aria-hidden="true">⌂</span>
             <h3>Spójna realizacja</h3>
             <p>Od koncepcji po efekt, który pokochasz.</p>
           </article>
         </div>
-        <a class="button button--outline" href="proces.html">Zobacz proces współpracy</a>
+
+        <a class="button button--outline" href="proces.html">
+          Zobacz proces współpracy
+        </a>
       </section>
 
       <section class="contact-cta" aria-labelledby="contact-title">
         <div class="contact-cta__content reveal">
           <p class="eyebrow">Kontakt</p>
           <h2 id="contact-title">Stwórzmy razem Twoją piękną przestrzeń</h2>
-          <p>Zapraszam do kontaktu — wspólnie stworzymy wnętrze idealnie dopasowane do Twoich potrzeb i marzeń.</p>
+
+          <p>
+            Zapraszam do kontaktu — wspólnie stworzymy wnętrze idealnie
+            dopasowane do Twoich potrzeb i marzeń.
+          </p>
+
           <div class="contact-actions">
-            <a class="button button--dark" href="kontakt.html">Przejdź do kontaktu</a>
-            <a class="button button--light" href="mailto:pracownia.miszczyszyn@gmail.com">Napisz e-mail</a>
+            <a class="button button--dark" href="kontakt.html">
+              Przejdź do kontaktu
+            </a>
+
+            <a
+              class="button button--light"
+              href="mailto:pracownia.miszczyszyn@gmail.com"
+            >
+              Napisz e-mail
+            </a>
           </div>
         </div>
-        <form class="contact-form reveal reveal--delay" action="mailto:pracownia.miszczyszyn@gmail.com" method="post" enctype="text/plain">
-          <label>
-            Imię
-            <input type="text" name="imie" placeholder="Twoje imię" required />
-          </label>
-          <label>
-            E-mail
-            <input type="email" name="email" placeholder="twoj@email.pl" required />
-          </label>
-          <label>
-            Wiadomość
-            <textarea name="wiadomosc" rows="4" placeholder="Napisz kilka słów o projekcie"></textarea>
-          </label>
-          <button class="button button--dark" type="submit">Wyślij wiadomość</button>
-          <p class="form-note">Formularz działa jako wersja demonstracyjna i otwiera program pocztowy.</p>
-        </form>
+
+        <div class="contact-guide reveal reveal--delay">
+          <p class="contact-guide__eyebrow">Pierwszy krok</p>
+
+          <h3>Opowiedz krótko o swoim wnętrzu</h3>
+
+          <p class="contact-guide__intro">
+            Nie musisz mieć gotowej wizji. Wystarczy kilka podstawowych
+            informacji, które pozwolą mi lepiej poznać Twoją przestrzeń
+            i potrzeby.
+          </p>
+
+          <div class="contact-guide__items">
+            <div class="contact-guide__item">
+              <span>01</span>
+              <p>Rodzaj pomieszczenia i przybliżony metraż</p>
+            </div>
+
+            <div class="contact-guide__item">
+              <span>02</span>
+              <p>Zakres projektu, którego potrzebujesz</p>
+            </div>
+
+            <div class="contact-guide__item">
+              <span>03</span>
+              <p>Preferowany termin rozpoczęcia współpracy</p>
+            </div>
+          </div>
+
+          <a class="button button--dark" href="kontakt.html">
+            Otwórz formularz kontaktowy
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand brand--footer" href="index.html" aria-label="Pracownia Pięknej Przestrzeni">
+      <a
+        class="brand brand--footer"
+        href="index.html"
+        aria-label="Pracownia Pięknej Przestrzeni"
+      >
         <span class="brand__mark">PPP</span>
         <span class="brand__divider"></span>
         <span class="brand__text">Pracownia<br />Pięknej Przestrzeni</span>
       </a>
+
       <div class="footer-contact">
-        <a class="footer-contact__item" href="tel:+48509850497" aria-label="Zadzwoń do Pracowni Pięknej Przestrzeni">
+        <a
+          class="footer-contact__item"
+          href="tel:+48509850497"
+          aria-label="Zadzwoń do Pracowni Pięknej Przestrzeni"
+        >
           <span class="footer-contact__icon">☎</span>
           <span>+48 509 850 497</span>
         </a>
-      
-        <a class="footer-contact__item" href="mailto:pracownia.miszczyszyn@gmail.com" aria-label="Napisz e-mail do Pracowni Pięknej Przestrzeni">
+
+        <a
+          class="footer-contact__item"
+          href="mailto:pracownia.miszczyszyn@gmail.com"
+          aria-label="Napisz e-mail do Pracowni Pięknej Przestrzeni"
+        >
           <span class="footer-contact__icon">✉</span>
           <span>pracownia.miszczyszyn@gmail.com</span>
         </a>
       </div>
+
       <div class="footer-social" aria-label="Social media">
-        <a href="https://www.instagram.com/ppp.magda.miszczyszyn" target="_blank" rel="noopener noreferrer" aria-label="Instagram Pracowni Pięknej Przestrzeni">
-          <svg class="footer-social__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5Zm4.25 3.25A4.75 4.75 0 1 1 7.25 12 4.75 4.75 0 0 1 12 7.25Zm0 2A2.75 2.75 0 1 0 14.75 12 2.75 2.75 0 0 0 12 9.25Zm5-2.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z" />
+        <a
+          href="https://www.instagram.com/ppp.magda.miszczyszyn"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram Pracowni Pięknej Przestrzeni"
+        >
+          <svg
+            class="footer-social__icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5Zm4.25 3.25A4.75 4.75 0 1 1 7.25 12 4.75 4.75 0 0 1 12 7.25Zm0 2A2.75 2.75 0 1 0 14.75 12 2.75 2.75 0 0 0 12 9.25Zm5-2.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"
+            />
           </svg>
         </a>
       </div>
