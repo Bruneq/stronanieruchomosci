@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Projektowanie i stylizacja wnętrz – oferta | Szczecin</title>
+    <title>Projektowanie i stylizacja wnętrz – oferta | Szczecin</title>
 
     <link rel="stylesheet" href="styles.css?v=20260718-privacy" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -280,7 +280,10 @@
 
       .offer-package {
         display: grid;
-        grid-template-columns: minmax(220px, 0.7fr) minmax(300px, 1fr) minmax(280px, 0.9fr);
+        grid-template-columns: minmax(220px, 0.7fr) minmax(300px, 1fr) minmax(
+            280px,
+            0.9fr
+          );
         gap: clamp(28px, 5vw, 72px);
         padding: clamp(34px, 5vw, 62px);
         border: 1px solid var(--offer-line);
@@ -522,7 +525,9 @@
         border-radius: 50%;
         font-size: 1.35rem;
         font-weight: 400;
-        transition: transform 220ms ease, background 220ms ease;
+        transition:
+          transform 220ms ease,
+          background 220ms ease;
       }
 
       .offer-faq details[open] summary::after {
@@ -541,44 +546,43 @@
         margin: 0;
       }
 
+      .offer-faq-link {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+        gap: clamp(38px, 8vw, 118px);
+        align-items: center;
+        padding: clamp(70px, 9vw, 125px) clamp(24px, 7vw, 112px);
+        color: #f7f4ee;
+        background: var(--offer-green);
+      }
 
-.offer-faq-link {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
-  gap: clamp(38px, 8vw, 118px);
-  align-items: center;
-  padding: clamp(70px, 9vw, 125px) clamp(24px, 7vw, 112px);
-  color: #f7f4ee;
-  background: var(--offer-green);
-}
+      .offer-faq-link h2 {
+        margin: 15px 0 0;
+        font-size: clamp(2.55rem, 4.5vw, 5.2rem);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -0.045em;
+      }
 
-.offer-faq-link h2 {
-  margin: 15px 0 0;
-  font-size: clamp(2.55rem, 4.5vw, 5.2rem);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.045em;
-}
+      .offer-faq-link .eyebrow {
+        color: #dce3dd;
+      }
 
-.offer-faq-link .eyebrow {
-  color: #dce3dd;
-}
+      .offer-faq-link__content {
+        max-width: 690px;
+      }
 
-.offer-faq-link__content {
-  max-width: 690px;
-}
+      .offer-faq-link__content p {
+        margin: 0 0 28px;
+        color: rgba(247, 244, 238, 0.74);
+        font-size: 1.02rem;
+        line-height: 1.75;
+      }
 
-.offer-faq-link__content p {
-  margin: 0 0 28px;
-  color: rgba(247, 244, 238, 0.74);
-  font-size: 1.02rem;
-  line-height: 1.75;
-}
-
-.offer-faq-link .button--outline {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.48);
-}
+      .offer-faq-link .button--outline {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.48);
+      }
 
       .offer-final-cta {
         display: grid;
@@ -733,26 +737,44 @@
           padding-right: 10px;
         }
       }
-
     </style>
-  
+
     <!-- SEO START -->
-    <meta name="description" content="Projektowanie wnętrz, stylizacja, konsultacje i wizualizacje 3D. Sprawdź zakres współpracy w Szczecinie i w formie online." />
+    <meta
+      name="description"
+      content="Projektowanie wnętrz, stylizacja, konsultacje i wizualizacje 3D. Sprawdź zakres współpracy w Szczecinie i w formie online."
+    />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Magdalena Miszczyszyn" />
     <meta name="theme-color" content="#fbf8f3" />
 
     <link rel="canonical" href="https://ppp-miszczyszyn.pl/oferta.html" />
-    <link rel="alternate" hreflang="pl-PL" href="https://ppp-miszczyszyn.pl/oferta.html" />
+    <link
+      rel="alternate"
+      hreflang="pl-PL"
+      href="https://ppp-miszczyszyn.pl/oferta.html"
+    />
 
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Pracownia Pięknej Przestrzeni" />
-    <meta property="og:title" content="Oferta projektowania wnętrz | Szczecin i online" />
-    <meta property="og:description" content="Od konsultacji po kompletną koncepcję z wizualizacjami 3D. Poznaj zakresy współpracy Pracowni Pięknej Przestrzeni." />
+    <meta
+      property="og:title"
+      content="Oferta projektowania wnętrz | Szczecin i online"
+    />
+    <meta
+      property="og:description"
+      content="Od konsultacji po kompletną koncepcję z wizualizacjami 3D. Poznaj zakresy współpracy Pracowni Pięknej Przestrzeni."
+    />
     <meta property="og:url" content="https://ppp-miszczyszyn.pl/oferta.html" />
-    <meta property="og:image" content="https://ppp-miszczyszyn.pl/assets/og-cover.jpg" />
-    <meta property="og:image:secure_url" content="https://ppp-miszczyszyn.pl/assets/og-cover.jpg" />
+    <meta
+      property="og:image"
+      content="https://ppp-miszczyszyn.pl/assets/og-cover.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://ppp-miszczyszyn.pl/assets/og-cover.jpg"
+    />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -762,9 +784,18 @@
     />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Oferta projektowania wnętrz | Szczecin i online" />
-    <meta name="twitter:description" content="Od konsultacji po kompletną koncepcję z wizualizacjami 3D. Poznaj zakresy współpracy Pracowni Pięknej Przestrzeni." />
-    <meta name="twitter:image" content="https://ppp-miszczyszyn.pl/assets/og-cover.jpg" />
+    <meta
+      name="twitter:title"
+      content="Oferta projektowania wnętrz | Szczecin i online"
+    />
+    <meta
+      name="twitter:description"
+      content="Od konsultacji po kompletną koncepcję z wizualizacjami 3D. Poznaj zakresy współpracy Pracowni Pięknej Przestrzeni."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ppp-miszczyszyn.pl/assets/og-cover.jpg"
+    />
     <!-- SEO END -->
   </head>
 
@@ -798,7 +829,7 @@
         <a href="realizacje.html">Realizacje</a>
         <a href="proces.html">Proces</a>
         <a href="kontakt.html">Kontakt</a>
-</nav>
+      </nav>
 
       <a class="button button--dark header-cta" href="kontakt.html">
         Umów konsultację
@@ -815,10 +846,10 @@
           </h1>
 
           <p class="offer-hero__lead">
-            Pomagam uporządkować pomysły, wykorzystać potencjał wnętrza
-            i świadomie podejmować decyzje. Zakres współpracy dobieramy
-            indywidualnie — od jednej konsultacji po kompletną koncepcję
-            z realistycznymi wizualizacjami 3D.
+            Pomagam uporządkować pomysły, wykorzystać potencjał wnętrza i
+            świadomie podejmować decyzje. Zakres współpracy dobieramy
+            indywidualnie — od jednej konsultacji po kompletną koncepcję z
+            realistycznymi wizualizacjami 3D.
           </p>
 
           <div class="offer-hero__actions">
@@ -834,7 +865,14 @@
 
         <div class="offer-hero__visual reveal reveal--delay">
           <img
-            alt="Ciepłe, eleganckie wnętrze z naturalnymi materiałami" src="assets/naturalne-cieplo.webp" width="1080" height="1433" decoding="async" loading="eager" fetchpriority="high" />
+            alt="Ciepłe, eleganckie wnętrze z naturalnymi materiałami"
+            src="assets/naturalne-cieplo.webp"
+            width="1080"
+            height="1433"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+          />
 
           <div class="offer-hero__badge">
             <strong>Szczecin i online</strong>
@@ -861,9 +899,9 @@
             <h3>Projektowanie wnętrz</h3>
 
             <p>
-              Funkcjonalna i stylistyczna koncepcja mieszkania, domu, lokalu
-              lub wybranego pomieszczenia. Projekt powstaje z uwzględnieniem
-              stylu życia, możliwości przestrzeni i planowanego budżetu.
+              Funkcjonalna i stylistyczna koncepcja mieszkania, domu, lokalu lub
+              wybranego pomieszczenia. Projekt powstaje z uwzględnieniem stylu
+              życia, możliwości przestrzeni i planowanego budżetu.
             </p>
           </article>
 
@@ -914,16 +952,11 @@
         </div>
       </section>
 
-      <section
-        class="offer-deliverables"
-        aria-labelledby="deliverables-title"
-      >
+      <section class="offer-deliverables" aria-labelledby="deliverables-title">
         <div class="offer-deliverables__heading reveal">
           <div>
             <p class="eyebrow">Efekt współpracy</p>
-            <h2 id="deliverables-title">
-              Decyzje oparte na spójnym planie
-            </h2>
+            <h2 id="deliverables-title">Decyzje oparte na spójnym planie</h2>
           </div>
 
           <p>
@@ -947,8 +980,8 @@
             <span>02</span>
             <h3>Kierunek stylistyczny</h3>
             <p>
-              Spójna paleta kolorów, materiałów, form i inspiracji dopasowana
-              do charakteru wnętrza.
+              Spójna paleta kolorów, materiałów, form i inspiracji dopasowana do
+              charakteru wnętrza.
             </p>
           </article>
 
@@ -956,8 +989,8 @@
             <span>03</span>
             <h3>Dobór wyposażenia</h3>
             <p>
-              Rekomendacje mebli, oświetlenia, materiałów i dodatków zgodne
-              z ustalonym zakresem i budżetem.
+              Rekomendacje mebli, oświetlenia, materiałów i dodatków zgodne z
+              ustalonym zakresem i budżetem.
             </p>
           </article>
 
@@ -965,8 +998,8 @@
             <span>04</span>
             <h3>Wizualizacje 3D</h3>
             <p>
-              Czytelny podgląd projektowanej przestrzeni przed realizacją
-              i podjęciem kosztownych decyzji.
+              Czytelny podgląd projektowanej przestrzeni przed realizacją i
+              podjęciem kosztownych decyzji.
             </p>
           </article>
 
@@ -974,8 +1007,8 @@
             <span>05</span>
             <h3>Uporządkowane materiały</h3>
             <p>
-              Opracowanie przekazane w uzgodnionej formie, które pozwala
-              wracać do ustaleń na kolejnych etapach.
+              Opracowanie przekazane w uzgodnionej formie, które pozwala wracać
+              do ustaleń na kolejnych etapach.
             </p>
           </article>
 
@@ -1002,9 +1035,9 @@
           </div>
 
           <p>
-            Każde wnętrze jest inne, dlatego ostateczny zakres, termin
-            i wycena są ustalane indywidualnie po poznaniu metrażu,
-            oczekiwań i materiałów wyjściowych.
+            Każde wnętrze jest inne, dlatego ostateczny zakres, termin i wycena
+            są ustalane indywidualnie po poznaniu metrażu, oczekiwań i
+            materiałów wyjściowych.
           </p>
         </div>
 
@@ -1014,8 +1047,8 @@
               <span class="offer-package__number">01</span>
               <h3>Konsultacja</h3>
               <p>
-                Dla osób, które potrzebują konkretnej odpowiedzi, kierunku
-                albo pomocy w podjęciu decyzji.
+                Dla osób, które potrzebują konkretnej odpowiedzi, kierunku albo
+                pomocy w podjęciu decyzji.
               </p>
             </div>
 
@@ -1035,8 +1068,8 @@
               <h4>Najlepszy wybór, gdy</h4>
 
               <p class="offer-package__note">
-                Masz już część pomysłów, ale potrzebujesz profesjonalnej
-                opinii albo rozwiązania konkretnego problemu.
+                Masz już część pomysłów, ale potrzebujesz profesjonalnej opinii
+                albo rozwiązania konkretnego problemu.
               </p>
 
               <dl class="offer-package__meta">
@@ -1184,8 +1217,8 @@
             <div>
               <h3>Ustalony harmonogram</h3>
               <p>
-                Orientacyjny czas realizacji jest podawany po analizie zakresu
-                i dostępności terminów.
+                Orientacyjny czas realizacji jest podawany po analizie zakresu i
+                dostępności terminów.
               </p>
             </div>
           </article>
@@ -1214,27 +1247,24 @@
         </div>
       </section>
 
-      
+      <section class="offer-faq-link" aria-labelledby="offer-faq-link-title">
+        <div class="reveal">
+          <p class="eyebrow">Masz pytania?</p>
+          <h2 id="offer-faq-link-title">
+            Najważniejsze odpowiedzi w jednym miejscu
+          </h2>
+        </div>
 
+        <div class="offer-faq-link__content reveal reveal--delay">
+          <p>
+            Sprawdź informacje o współpracy online, pomiarach, materiałach
+            potrzebnych na początku, czasie realizacji, poprawkach, wycenie oraz
+            sposobie płatności.
+          </p>
 
-<section class="offer-faq-link" aria-labelledby="offer-faq-link-title">
-  <div class="reveal">
-    <p class="eyebrow">Masz pytania?</p>
-    <h2 id="offer-faq-link-title">Najważniejsze odpowiedzi w jednym miejscu</h2>
-  </div>
-
-  <div class="offer-faq-link__content reveal reveal--delay">
-    <p>
-      Sprawdź informacje o współpracy online, pomiarach, materiałach
-      potrzebnych na początku, czasie realizacji, poprawkach, wycenie
-      oraz sposobie płatności.
-    </p>
-
-    <a class="button button--outline" href="faq.html">
-      Przejdź do FAQ
-    </a>
-  </div>
-</section>
+          <a class="button button--outline" href="faq.html"> Przejdź do FAQ </a>
+        </div>
+      </section>
 
       <section class="offer-final-cta" aria-labelledby="offer-cta-title">
         <p class="eyebrow">Pierwszy krok</p>
@@ -1245,8 +1275,8 @@
 
         <p>
           Wystarczy krótka wiadomość z informacją o rodzaju wnętrza,
-          przybliżonym metrażu i oczekiwanym zakresie. Na tej podstawie
-          ustalimy najlepszy kolejny krok.
+          przybliżonym metrażu i oczekiwanym zakresie. Na tej podstawie ustalimy
+          najlepszy kolejny krok.
         </p>
 
         <div class="offer-final-cta__actions">
@@ -1291,14 +1321,13 @@
           <span>pracownia.miszczyszyn@gmail.com</span>
         </a>
 
-
         <a
-        class="footer-contact__item"
-        href="faq.html"
-        aria-label="Najczęściej zadawane pytania"
+          class="footer-contact__item"
+          href="faq.html"
+          aria-label="Najczęściej zadawane pytania"
         >
-        <span class="footer-contact__icon" aria-hidden="true">?</span>
-        <span>FAQ</span>
+          <span class="footer-contact__icon" aria-hidden="true">?</span>
+          <span>FAQ</span>
         </a>
       </div>
 
