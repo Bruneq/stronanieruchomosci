@@ -408,6 +408,7 @@ if (portfolioLightboxFigure && portfolioLightboxImage) {
 
   document.body.append(backToTop);
 
+  const siteFooter = document.querySelector('.site-footer, footer');
   let scrollFrameRequested = false;
 
   const updateBackToTop = () => {
@@ -416,6 +417,22 @@ if (portfolioLightboxFigure && portfolioLightboxImage) {
     backToTop.classList.toggle('is-visible', shouldShow);
     backToTop.setAttribute('aria-hidden', String(!shouldShow));
     backToTop.tabIndex = shouldShow ? 0 : -1;
+
+    // Gdy stopka wchodzi w obszar ekranu, przycisk płynnie przesuwa się
+    // ponad nią, dzięki czemu nie zasłania ikony Instagrama ani linków.
+    if (siteFooter) {
+      const footerTop = siteFooter.getBoundingClientRect().top;
+      const footerOverlap = Math.max(0, window.innerHeight - footerTop);
+      const safeGap = footerOverlap > 0 ? (window.innerWidth <= 680 ? 12 : 18) : 0;
+
+      backToTop.style.setProperty(
+        '--back-to-top-footer-offset',
+        `${Math.round(footerOverlap + safeGap)}px`
+      );
+    } else {
+      backToTop.style.setProperty('--back-to-top-footer-offset', '0px');
+    }
+
     scrollFrameRequested = false;
   };
 

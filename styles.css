@@ -2842,9 +2842,11 @@ html {
 
 /* Przycisk „Wróć na górę”. */
 .back-to-top {
+  --back-to-top-edge: clamp(16px, 2.6vw, 34px);
+  --back-to-top-footer-offset: 0px;
   position: fixed;
-  right: clamp(16px, 2.6vw, 34px);
-  bottom: clamp(16px, 2.6vw, 34px);
+  right: var(--back-to-top-edge);
+  bottom: calc(var(--back-to-top-edge) + var(--back-to-top-footer-offset));
   z-index: 40;
   display: inline-flex;
   align-items: center;
@@ -2868,6 +2870,7 @@ html {
     opacity 240ms ease,
     visibility 240ms ease,
     transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    bottom 240ms cubic-bezier(0.22, 1, 0.36, 1),
     background-color 200ms ease,
     box-shadow 200ms ease;
 }
