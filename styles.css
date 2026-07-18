@@ -1115,8 +1115,20 @@ h3 {
 
 @media (max-width: 780px) {
   .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 12px;
     min-height: 74px;
-    padding: 14px 18px;
+    padding: 14px 8px 14px 18px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .nav-toggle {
+    grid-column: 2;
+    justify-self: end;
+    margin-right: 0;
   }
 
   .brand__mark {
@@ -2704,22 +2716,41 @@ body:has(.portfolio-lightbox[open]) {
     right: 14px;
   }
 
+  .portfolio-lightbox figure {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .portfolio-lightbox figure img {
+    will-change: transform, opacity;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  /* Na telefonie zdjęcia zmieniamy gestem przesunięcia, bez strzałek. */
   .portfolio-lightbox__nav {
-    top: auto;
-    bottom: 18px;
-    transform: none;
+    display: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .portfolio-lightbox figure {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
-  .portfolio-lightbox__nav:hover {
-    transform: scale(1.04);
+  .portfolio-lightbox figure img {
+    will-change: transform, opacity;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
   }
 
-  .portfolio-lightbox__nav--prev {
-    left: 18px;
-  }
-
-  .portfolio-lightbox__nav--next {
-    right: 18px;
+  .portfolio-lightbox__nav {
+    display: none;
   }
 }
 

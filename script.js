@@ -79,6 +79,7 @@ if ('IntersectionObserver' in window) {
 }
 
 const portfolioLightbox = document.querySelector('.portfolio-lightbox');
+const portfolioLightboxFigure = portfolioLightbox?.querySelector('figure');
 const portfolioLightboxImage = portfolioLightbox?.querySelector('figure img');
 const portfolioLightboxCaption = portfolioLightbox?.querySelector('figcaption');
 const portfolioLightboxClose = portfolioLightbox?.querySelector('.portfolio-lightbox__close');
@@ -141,6 +142,12 @@ portfolioLightbox?.addEventListener('click', (event) => {
 });
 
 portfolioLightbox?.addEventListener('close', () => {
+  if (portfolioLightboxImage) {
+    portfolioLightboxImage.style.transition = '';
+    portfolioLightboxImage.style.transform = '';
+    portfolioLightboxImage.style.opacity = '';
+  }
+
   portfolioLightboxTrigger?.focus({ preventScroll: true });
   portfolioLightboxTrigger = null;
 });
@@ -165,6 +172,127 @@ document.addEventListener(
   },
   true
 );
+
+// Mobilna nawigacja gestem w podglądzie realizacji.
+// Strzałki pozostają dostępne na komputerze, a na telefonie są ukryte w CSS.
+if (portfolioLightboxFigure && portfolioLightboxImage) {
+  const mobileLightboxQuery = window.matchMedia('(max-width: 780px), (hover: none) and (pointer: coarse)');
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchDeltaX = 0;
+  let touchDeltaY = 0;
+  let touchStartedAt = 0;
+  let horizontalSwipe = false;
+  let swipeAnimationRunning = false;
+
+  const resetSwipePosition = () => {
+    portfolioLightboxImage.style.transition = 'transform 180ms ease, opacity 180ms ease';
+    portfolioLightboxImage.style.transform = 'translate3d(0, 0, 0)';
+    portfolioLightboxImage.style.opacity = '1';
+  };
+
+  const animateSwipeChange = (direction) => {
+    if (swipeAnimationRunning) return;
+    swipeAnimationRunning = true;
+
+    const exitOffset = direction > 0 ? -72 : 72;
+    const enterOffset = direction > 0 ? 72 : -72;
+
+    portfolioLightboxImage.style.transition = 'transform 140ms ease, opacity 140ms ease';
+    portfolioLightboxImage.style.transform = `translate3d(${exitOffset}px, 0, 0)`;
+    portfolioLightboxImage.style.opacity = '0';
+
+    window.setTimeout(() => {
+      updatePortfolioLightbox(activePortfolioImage + direction);
+      portfolioLightboxImage.style.transition = 'none';
+      portfolioLightboxImage.style.transform = `translate3d(${enterOffset}px, 0, 0)`;
+      portfolioLightboxImage.style.opacity = '0';
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          portfolioLightboxImage.style.transition = 'transform 220ms ease, opacity 220ms ease';
+          portfolioLightboxImage.style.transform = 'translate3d(0, 0, 0)';
+          portfolioLightboxImage.style.opacity = '1';
+
+          window.setTimeout(() => {
+            swipeAnimationRunning = false;
+          }, 230);
+        });
+      });
+    }, 145);
+  };
+
+  portfolioLightboxFigure.addEventListener(
+    'touchstart',
+    (event) => {
+      if (!mobileLightboxQuery.matches || event.touches.length !== 1 || swipeAnimationRunning) return;
+
+      const touch = event.touches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+      touchDeltaX = 0;
+      touchDeltaY = 0;
+      touchStartedAt = performance.now();
+      horizontalSwipe = false;
+
+      portfolioLightboxImage.style.transition = 'none';
+    },
+    { passive: true }
+  );
+
+  portfolioLightboxFigure.addEventListener(
+    'touchmove',
+    (event) => {
+      if (!mobileLightboxQuery.matches || event.touches.length !== 1 || swipeAnimationRunning) return;
+
+      const touch = event.touches[0];
+      touchDeltaX = touch.clientX - touchStartX;
+      touchDeltaY = touch.clientY - touchStartY;
+
+      if (!horizontalSwipe) {
+        horizontalSwipe = Math.abs(touchDeltaX) > 10 && Math.abs(touchDeltaX) > Math.abs(touchDeltaY) * 1.15;
+      }
+
+      if (!horizontalSwipe) return;
+
+      event.preventDefault();
+      const dragOffset = Math.max(-130, Math.min(130, touchDeltaX * 0.72));
+      const dragOpacity = Math.max(0.55, 1 - Math.abs(touchDeltaX) / 420);
+
+      portfolioLightboxImage.style.transform = `translate3d(${dragOffset}px, 0, 0)`;
+      portfolioLightboxImage.style.opacity = String(dragOpacity);
+    },
+    { passive: false }
+  );
+
+  portfolioLightboxFigure.addEventListener('touchend', () => {
+    if (!mobileLightboxQuery.matches || swipeAnimationRunning) return;
+
+    const elapsed = performance.now() - touchStartedAt;
+    const distanceThreshold = Math.min(86, Math.max(48, window.innerWidth * 0.12));
+    const fastSwipe = elapsed < 280 && Math.abs(touchDeltaX) > 34;
+    const farEnough = Math.abs(touchDeltaX) >= distanceThreshold;
+    const mostlyHorizontal = Math.abs(touchDeltaX) > Math.abs(touchDeltaY) * 1.15;
+
+    if (horizontalSwipe && mostlyHorizontal && (farEnough || fastSwipe)) {
+      // Przesunięcie w lewo pokazuje następne zdjęcie, w prawo poprzednie.
+      animateSwipeChange(touchDeltaX < 0 ? 1 : -1);
+    } else {
+      resetSwipePosition();
+    }
+
+    touchDeltaX = 0;
+    touchDeltaY = 0;
+    horizontalSwipe = false;
+  });
+
+  portfolioLightboxFigure.addEventListener('touchcancel', () => {
+    if (!swipeAnimationRunning) resetSwipePosition();
+    touchDeltaX = 0;
+    touchDeltaY = 0;
+    horizontalSwipe = false;
+  });
+}
 
 // =========================================================
 // SUBTELNE ANIMACJE + PRZYCISK „WRÓĆ NA GÓRĘ”
