@@ -503,3 +503,28 @@ if (portfolioLightboxFigure && portfolioLightboxImage) {
 
   updateBackToTop();
 })();
+
+/* === PRZEKIEROWANIA STARYCH LINKÓW REALIZACJI: START === */
+(() => {
+  const projectPages = {
+    "#dla-niego": "realizacja-dla-niego.html",
+    "#dla-pary": "realizacja-dla-pary.html",
+    "#pokoj-goscinny": "realizacja-pokoj-goscinny.html",
+    "#mini-kawalerka": "realizacja-mini-kawalerka.html",
+    "#sypialnia-w-trzech-odslonach":
+      "realizacja-sypialnia-w-trzech-odslonach.html",
+  };
+
+  const isPortfolioIndex =
+    window.location.pathname.endsWith("/realizacje.html") ||
+    window.location.pathname.endsWith("/realizacje");
+
+  if (!isPortfolioIndex) return;
+
+  const targetPage = projectPages[window.location.hash];
+
+  if (targetPage) {
+    window.location.replace(targetPage);
+  }
+})();
+/* === PRZEKIEROWANIA STARYCH LINKÓW REALIZACJI: END === */
